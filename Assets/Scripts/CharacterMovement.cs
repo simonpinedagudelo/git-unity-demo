@@ -21,9 +21,8 @@ public class CharacterMovement : MonoBehaviour
 
 	private void Move ()
 	{
-		float horizontalSpeed = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 		Vector3 velocity = rigidbody.velocity;
-		velocity.x = horizontalSpeed;
+		velocity.x = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 		rigidbody.velocity = velocity;
 		Debug.Log (velocity);
 	}

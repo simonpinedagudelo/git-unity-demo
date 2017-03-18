@@ -28,7 +28,15 @@ public class CharacterMovement : MonoBehaviour
 	}
 
 	private void Jump ()
+	{	
+		rigidbody.velocity=new Vector3(rigidbody.velocity.x,jumpSpeed*Time.deltaTime);
+	}
+
+
+	void OnTriggerEnter(Collider other)
 	{
-		//TODO: 
+		if(other.CompareTag("limite")){
+			Destroy(this.gameObject);
+		}
 	}
 }

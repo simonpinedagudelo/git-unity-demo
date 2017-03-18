@@ -25,6 +25,7 @@ public class CharacterMovement : MonoBehaviour
 		Vector3 velocity = rigidbody.velocity;
 		velocity.x = horizontalSpeed;
 		rigidbody.velocity = velocity;
+		Debug.Log (velocity);
 	}
 
 	private void Jump ()
